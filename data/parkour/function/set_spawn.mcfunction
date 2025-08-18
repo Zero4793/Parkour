@@ -1,0 +1,1 @@
+tp @n[type=minecraft:armor_stand,tag=spawn] @s
