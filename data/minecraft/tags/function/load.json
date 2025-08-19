@@ -1,5 +1,6 @@
 {
 	"values": [
-		"parkour:init"
+		"parkour:init",
+		"zero:id/init"
 	]
 }

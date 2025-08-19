@@ -1,5 +1,6 @@
 {
 	"values": [
-		"parkour:core"
+		"parkour:core",
+		"zero:id/core"
 	]
 }
