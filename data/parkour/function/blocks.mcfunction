@@ -23,9 +23,14 @@ execute if block ~ ~-1 ~ minecraft:gold_ore run effect give @s minecraft:speed 1
 execute if block ~ ~-1 ~ minecraft:lapis_ore run effect give @s minecraft:jump_boost 1 1 true
 execute if block ~ ~-1 ~ minecraft:emerald_ore run effect give @s minecraft:slow_falling 1 1 true
 execute if block ~ ~-1 ~ minecraft:diamond_ore run effect give @s minecraft:levitation 1 1 true
-# redstone, copper, deep and nether variants, full blocks
-
-# barrier<->stone? by sponge?
+# ore full blocks
+execute if block ~ ~-1 ~ minecraft:coal_block run effect give @s minecraft:wither 3 8 true
+execute if block ~ ~-1 ~ minecraft:iron_block run effect give @s minecraft:slowness 3 8 true
+execute if block ~ ~-1 ~ minecraft:gold_block run effect give @s minecraft:speed 3 8 true
+execute if block ~ ~-1 ~ minecraft:lapis_block run effect give @s minecraft:jump_boost 3 8 true
+execute if block ~ ~-1 ~ minecraft:emerald_block run effect give @s minecraft:slow_falling 3 255 true
+execute if block ~ ~-1 ~ minecraft:diamond_block run effect give @s minecraft:levitation 3 8 true
+# redstone, copper, deep and nether variants
 
 # wool
 execute if block ~ ~-1 ~ black_wool run setblock ~ ~-1 ~ air
@@ -44,3 +49,9 @@ execute if block ~ ~-1 ~ magenta_wool run setblock ~ ~-1 ~ purple_wool
 execute if block ~ ~-1 ~ pink_wool run setblock ~ ~-1 ~ magenta_wool
 execute if block ~ ~-1 ~ light_gray_wool run setblock ~ ~-1 ~ pink_wool
 execute if block ~ ~-1 ~ white_wool run setblock ~ ~-1 ~ light_gray_wool
+
+# barrier<->smooth_stone? by redstone_ore?
+# or redstone night vision?
+# or nausea, darkness, blindness
+fill ~-8 ~-8 ~-8 ~8 ~8 ~8 minecraft:barrier replace minecraft:smooth_stone
+execute if block ~ ~-1 ~ minecraft:redstone_ore run fill ~-8 ~-8 ~-8 ~8 ~8 ~8 minecraft:smooth_stone replace minecraft:barrier

@@ -1,2 +1,2 @@
 scoreboard objectives add zero.id dummy
-scoreboard players add zero.total_players server 0
+scoreboard players add total_players zero.id 0

@@ -1,2 +1,2 @@
-scoreboard players add zero.total_players server 1
-scoreboard players operation @s zero.id = zero.total_players server
+scoreboard players add total_players zero.id 1
+scoreboard players operation @s zero.id = total_players zero.id
