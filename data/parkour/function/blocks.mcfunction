@@ -1,9 +1,12 @@
 # as @a at @s
 
-execute if block ~ ~-1 ~ bedrock run function parkour:set_spawn
-execute if block ~ ~-1 ~ grass_block run function parkour:respawn
-execute if block ~ ~-1 ~ lava run function parkour:respawn
-# beacon as some sort of goal?
+# store id
+execute store result storage parkour id int 1 run scoreboard players get @s zero.id
+# spawn
+execute as @s at @s run function parkour:ensure_one_spawn with storage parkour
+execute if block ~ ~-1 ~ bedrock run function parkour:set_spawn with storage parkour
+execute if block ~ ~-1 ~ grass_block run function parkour:respawn with storage parkour
+execute if block ~ ~-1 ~ lava run function parkour:respawn with storage parkour
 
 # stones
 execute if block ~ ~-1 ~ granite run tp @s ~ ~6 ~
@@ -22,7 +25,7 @@ execute if block ~ ~-1 ~ minecraft:emerald_ore run effect give @s minecraft:slow
 execute if block ~ ~-1 ~ minecraft:diamond_ore run effect give @s minecraft:levitation 1 1 true
 # redstone, copper, deep and nether variants, full blocks
 
-# barrier<->? by ?
+# barrier<->stone? by sponge?
 
 # wool
 execute if block ~ ~-1 ~ black_wool run setblock ~ ~-1 ~ air
