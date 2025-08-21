@@ -3,7 +3,7 @@
 # store id
 execute store result storage parkour id int 1 run scoreboard players get @s zero.id
 # spawn
-execute as @s at @s unless data storage parkour {id:0} run function parkour:ensure_one_spawn with storage parkour
+execute unless data storage parkour {id:0} run function parkour:ensure_one_spawn with storage parkour
 execute if block ~ ~-1 ~ bedrock run function parkour:set_spawn with storage parkour
 execute if block ~ ~-1 ~ grass_block run function parkour:respawn with storage parkour
 execute if block ~ ~-1 ~ lava run function parkour:respawn with storage parkour

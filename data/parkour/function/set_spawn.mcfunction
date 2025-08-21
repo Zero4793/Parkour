@@ -1,1 +1,1 @@
-$tp @n[type=minecraft:armor_stand,tag=spawn,scores={zero.id=$(id)}] @s
+$tp @n[type=minecraft:marker,tag=spawn,nbt={data:{id:$(id)}}] @s
